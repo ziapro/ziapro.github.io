@@ -423,10 +423,9 @@ int main()
     return 0;
 }
 </code></pre><h2 id="caioj"><a href="#caioj" class="headerlink" title="caioj"></a>caioj</h2><h3 id="caioj1030"><a href="#caioj1030" class="headerlink" title="caioj1030"></a>caioj1030</h3><p>判断方向与是否出界。</p>
-<pre><code>
-#include<cstdio>
-#include<iostream>
-#include<cstring>
+<pre><code>#include&lt;cstdio&gt;
+#include&lt;iostream&gt;
+#include&lt;cstring&gt;
 
 using namespace std;
 
@@ -438,12 +437,38 @@ int main()
 {
     memset(pic,-1,sizeof(pic));
     int n;
-    cin>>n;
-    for(int i=1;i<=n;i++) {="" for(int="" j="1;j<=n;j++)" pic[i][j]="0;" }="" int="" ix="1,iy=1;" cnt="0;" i="1;i<=n*n;i++)" pic[ix][iy]="i;" if(ix="=n" &&="" iy="=n)" break;="" if(cnt="=0" ||="" {cnt="(cnt+1)%4;" while(pic[="" ix+dx[cnt]="" ][="" iy+dy[cnt]="" ])="" my="1;my<=n;my++)" mx="1;mx<=n;mx++)" printf("%4d",pic[my][mx]);="" if(mx="=n)" cout<<"\n";="" return="" 0;="" <="" code=""></=n;i++)></cstring></iostream></cstdio></code></pre>
+    cin&gt;&gt;n;
+    for(int i=1;i&lt;=n;i++)
+{
+    for(int j=1;j&lt;=n;j++)
+    {
+        pic[i][j]=0;
+    }
+}
 
+int ix=1,iy=1;
+int cnt=0;
+for(int i=1;i&lt;=n*n;i++)
+{
 
+    pic[ix][iy]=i;
+    if(ix==n &amp;&amp; iy==n) break;
+    if(cnt==0 || cnt==2) {cnt=(cnt+1)%4;
+    }
+    while(pic[ ix+dx[cnt] ][ iy+dy[cnt] ]) cnt=(cnt+1)%4;
+    ix=ix+dx[cnt];
+    iy=iy+dy[cnt];
+}
+for(int my=1;my&lt;=n;my++)
+    for(int mx=1;mx&lt;=n;mx++)
+        {
+            printf(&quot;%4d&quot;,pic[my][mx]);
+            if(mx==n) cout&lt;&lt;&quot;\n&quot;;
 
-<h2 id="luogu"><a href="#luogu" class="headerlink" title="luogu"></a>luogu</h2><h2 id="codevs"><a href="#codevs" class="headerlink" title="codevs"></a>codevs</h2><h2 id="bzoj"><a href="#bzoj" class="headerlink" title="bzoj"></a>bzoj</h2><h2 id="入门oj"><a href="#入门oj" class="headerlink" title="入门oj"></a>入门oj</h2><h2 id="codeforces"><a href="#codeforces" class="headerlink" title="codeforces"></a>codeforces</h2>
+        }
+return 0;
+}
+</code></pre><h2 id="luogu"><a href="#luogu" class="headerlink" title="luogu"></a>luogu</h2><h2 id="codevs"><a href="#codevs" class="headerlink" title="codevs"></a>codevs</h2><h2 id="bzoj"><a href="#bzoj" class="headerlink" title="bzoj"></a>bzoj</h2><h2 id="入门oj"><a href="#入门oj" class="headerlink" title="入门oj"></a>入门oj</h2><h2 id="codeforces"><a href="#codeforces" class="headerlink" title="codeforces"></a>codeforces</h2>
       
     </div>
     
