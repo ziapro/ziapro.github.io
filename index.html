@@ -272,6 +272,223 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/tijie/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Trivial573">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/21214944?v=4&s=400&u=fc5fe1744aa9f33f1392953257522db891dcaf81">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ERROR573">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/tijie/" itemprop="url">题解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-16T20:28:00+08:00">
+                2017-10-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/oi/" itemprop="url" rel="index">
+                    <span itemprop="name">oi</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="一些题解（水）"><a href="#一些题解（水）" class="headerlink" title="一些题解（水）"></a>一些题解（水）</h1><h2 id="tyvj"><a href="#tyvj" class="headerlink" title="tyvj"></a>tyvj</h2><h3 id="tyvj1025"><a href="#tyvj1025" class="headerlink" title="tyvj1025"></a>tyvj1025</h3><p>数据太大，long long存不下也没必要，采用字符串处理末位即可。</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
+int main()
+{
+    char s[110];
+    int n;
+    cin&gt;&gt;n;
+
+for(int i=1;i&lt;=n;i++)
+{
+    cin&gt;&gt;s;
+    int l=strlen(s)-1;
+    if((s[l]-&apos;0&apos;)%2==0) cout&lt;&lt;&quot;even&quot;;
+    else cout&lt;&lt;&quot;odd&quot;;
+
+    cout&lt;&lt;endl;
+}
+return 0;
+</code></pre><p>}</p>
+<h3 id="tyvj1001"><a href="#tyvj1001" class="headerlink" title="tyvj1001"></a>tyvj1001</h3><p>水一水。</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;algorithm&gt;
+#include&lt;cmath&gt;
+using namespace std;
+int a[10010];
+
+bool IS_PRIME(int x)
+{
+    if(x&lt;2) return false;
+    for(int i=2;i&lt;=sqrt(x);i++)
+    {
+        if(x%i==0) return false;
+
+}
+return true;
+
+}
+int main()
+{
+    int n,k;
+    cin&gt;&gt;n&gt;&gt;k;
+
+    for(int i=1;i&lt;=n;i++)
+    {
+        cin&gt;&gt;a[i];
+    }
+    sort(a,a+n+1);
+    int ans=a[n-k+1]-a[k];
+    if(IS_PRIME(ans)) cout&lt;&lt;&quot;YES&quot;;
+    else cout&lt;&lt;&quot;NO&quot;;
+    cout&lt;&lt;endl&lt;&lt;ans&lt;&lt;endl;
+    return 0;
+}
+</code></pre><h2 id="caioj"><a href="#caioj" class="headerlink" title="caioj"></a>caioj</h2><h3 id="caioj1030"><a href="#caioj1030" class="headerlink" title="caioj1030"></a>caioj1030</h3><p>判断方向与是否出界。</p>
+<pre><code>
+#include<cstdio>
+#include<iostream>
+#include<cstring>
+
+using namespace std;
+
+int pic[25][25];
+
+    int dx[]={1,-1,0,1};
+    int dy[]={0,1,1,-1};
+int main()
+{
+    memset(pic,-1,sizeof(pic));
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++) {="" for(int="" j="1;j<=n;j++)" pic[i][j]="0;" }="" int="" ix="1,iy=1;" cnt="0;" i="1;i<=n*n;i++)" pic[ix][iy]="i;" if(ix="=n" &&="" iy="=n)" break;="" if(cnt="=0" ||="" {cnt="(cnt+1)%4;" while(pic[="" ix+dx[cnt]="" ][="" iy+dy[cnt]="" ])="" my="1;my<=n;my++)" mx="1;mx<=n;mx++)" printf("%4d",pic[my][mx]);="" if(mx="=n)" cout<<"\n";="" return="" 0;="" <="" code=""></=n;i++)></cstring></iostream></cstdio></code></pre>
+
+
+
+<h2 id="luogu"><a href="#luogu" class="headerlink" title="luogu"></a>luogu</h2><h2 id="codevs"><a href="#codevs" class="headerlink" title="codevs"></a>codevs</h2><h2 id="bzoj"><a href="#bzoj" class="headerlink" title="bzoj"></a>bzoj</h2><h2 id="入门oj"><a href="#入门oj" class="headerlink" title="入门oj"></a>入门oj</h2><h2 id="codeforces"><a href="#codeforces" class="headerlink" title="codeforces"></a>codeforces</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -453,7 +670,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
